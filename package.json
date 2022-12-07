@@ -1,0 +1,35 @@
+{
+  "name": "@rollforguild/api",
+  "version": "0.0.0-development",
+  "main": "./src/index.js",
+  "license": "BSD-3-Clause",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "NODE_ENV=development DEBUG=true nodemon --inspect ./src/index.js",
+    "start": "node ./src/index.js",
+    "test": "NODE_ENV=test nyc --reporter=lcovonly --reporter=text-summary mocha",
+    "test-app": "nodemon ./test-app/index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@koa/cors": "^4.0.0",
+    "@prisma/client": "^4.7.1",
+    "dotenv": "^16.0.3",
+    "firebase-admin": "^11.3.0",
+    "koa": "^2.14.1",
+    "koa-body": "^6.0.1",
+    "koa-compress": "^5.1.0",
+    "koa-logger": "^3.2.1",
+    "koa-no-trailing-slash": "^2.1.0",
+    "koa-router": "^12.0.0",
+    "node-fetch": "^3.3.0",
+    "prisma": "^4.7.1",
+    "uuid": "^9.0.0",
+    "winston": "^3.8.2",
+    "ws": "^8.11.0"
+  },
+  "packageManager": "yarn@3.3.0"
+}
