@@ -1,13 +1,14 @@
 // Local imports
 import { GET } from '../helpers/httpMethods.js'
-import * as httpStatus from '../helpers/httpStatus.js'
+import { OK } from '../helpers/httpStatus.js'
 
 
 
 
 
 export function handler(context) {
-	context.status = httpStatus.NO_CONTENT.code
+	context.status = OK.code
+	context.body = { healthy: true }
 }
 
 export const allowedMethods = [GET]
